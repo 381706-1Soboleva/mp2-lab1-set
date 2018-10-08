@@ -2,6 +2,11 @@
 
 #include <gtest.h>
 
+TEST(MathTest, TwoPlusTwoEqualsFour) 
+{
+	EXPECT_EQ(2 + 2, 4);
+}
+
 TEST(TBitField, can_create_bitfield_with_positive_length)
 {
   ASSERT_NO_THROW(TBitField bf(3));
