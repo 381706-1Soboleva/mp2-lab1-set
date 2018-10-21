@@ -1,7 +1,7 @@
 ﻿#include <gtest.h>
 
-int main(int arg1, char **arg2) 
+int main(int argc, char **argv) 
 {
-    ::testing::InitGoogleTest(&arg1, arg2);
+    ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
