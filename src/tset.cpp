@@ -62,7 +62,8 @@ TSet& TSet::operator=(const TSet &s) // присваивание
 
 int TSet::operator==(const TSet &s) const // сравнение
 {
-	return (BitField == s.BitField);
+	if (BitField == s.BitField)
+	return 1;
 }
 
 int TSet::operator!=(const TSet &s) const // сравнение
