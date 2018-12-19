@@ -296,7 +296,7 @@ TEST(TSet, check_negation_operator)
   EXPECT_EQ(expSet, set1);
 }
 //-------------------------------------------------------------------------
-TEST(TSet, can_compare_non_equal_set2)
+TEST(TSet, can_compare_non_equal_set1)
 {
 	int dlina = 1;
 	TSet set1(dlina), set2(dlina);
