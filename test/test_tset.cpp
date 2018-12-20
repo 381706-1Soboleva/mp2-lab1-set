@@ -318,7 +318,7 @@ TEST(TSet, nonequivalence_set_false_check)
 {
 	int dlina = 3;
 	TSet set1(dlina) ;
-	TSet set2(set 1);
+	TSet set2(set1);
 	EXPECT_EQ(0, set1 != set2);
 }
 //---------------------------------------------------------------------------------
@@ -326,7 +326,7 @@ TEST(TSet, eq_set_true_check)
 {
 	int dlina = 3;
 	TSet set1(dlina) ;
-	TSet set2(set 1);
+	TSet set2(set1);
 	EXPECT_EQ(1, set1 == set2);
 }
 //---------------------------------------------------------------------------------
