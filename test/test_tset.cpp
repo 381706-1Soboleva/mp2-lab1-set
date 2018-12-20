@@ -311,7 +311,7 @@ TEST(TSet, nonequivalence_set_true_check)
 	set2.InsElem(4);
 	set1.InsElem(2);
 
-	EXPECT_EQ(true, set1 != set2);
+	EXPECT_EQ(1, set1 != set2);
 }
 //---------------------------------------------------------------------------------
 TEST(TSet, nonequivalence_set_false_check)
@@ -329,7 +329,7 @@ TEST(TSet, nonequivalence_set_false_check)
 	set2.InsElem(4);
 	set1.InsElem(2);
 
-	EXPECT_EQ(false, set1 != set2);
+	EXPECT_EQ(0, set1 != set2);
 }
 //---------------------------------------------------------------------------------
 TEST(TSet, eq_set_true_check)
@@ -347,7 +347,7 @@ TEST(TSet, eq_set_true_check)
 	set2.InsElem(4);
 	set1.InsElem(2);
 
-	EXPECT_EQ(true, set1 == set2);
+	EXPECT_EQ(1, set1 == set2);
 }
 //---------------------------------------------------------------------------------
 TEST(TSet, eq_set_false_check)
@@ -365,6 +365,6 @@ TEST(TSet, eq_set_false_check)
 	set2.InsElem(4);
 	set1.InsElem(2);
 
-	EXPECT_EQ(false, set1 == set2);
+	EXPECT_EQ(0, set1 == set2);
 }
 //---------------------------------------------------------------------------------
