@@ -98,7 +98,7 @@ int TBitField::operator==(const TBitField &bf) const // сравнение
 
 int TBitField::operator!=(const TBitField &bf) const // сравнение
 {
-	if (this->BitField ==(bf)) == 1) return 0;
+	if (operator ==(bf) == 1) return 0;
 	else return 1;
 }
 
