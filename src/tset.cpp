@@ -64,16 +64,16 @@ int TSet::operator==(const TSet &s) const // сравнение
 {
 	if (BitField == s.BitField)
 	return 1;
+	else return 0;
 }
 
 int TSet::operator!=(const TSet &s) const // сравнение
 {
-	 int inf = 0;
 	 if (MaxPower != s.MaxPower)
-	 inf = 1;
-   if (BitField != s.BitField)
-	 inf = 1;
-   return inf;
+	 return 1;
+	 else if (BitField != s.BitField)
+	 return 1;
+	else return 0;
 }
 
 TSet TSet::operator+(const TSet &s) // объединение
