@@ -295,8 +295,8 @@ TEST(TSet, check_negation_operator)
 
   EXPECT_EQ(expSet, set1);
 }
-//---------------------------------------------------------------------------------
-TEST(TSet, nonequivalence_gives_right_answer)
+/---------------------------------------------------------------------------------
+TEST(TSet, nonequivalence_set_true_check)
 {
 	int dlina = 7;
 	TSet set1(dlina), set2(dlina);
@@ -313,9 +313,26 @@ TEST(TSet, nonequivalence_gives_right_answer)
 
 	EXPECT_EQ(true, set1 != set2);
 }
-
 //---------------------------------------------------------------------------------
-TEST(TSet, eq_gives_right_answer)
+TEST(TSet, nonequivalence_set_false_check)
+{
+	int dlina = 7;
+	TSet set1(dlina), set2(dlina);
+
+	set1.InsElem(6);
+	set1.InsElem(5);
+	set1.InsElem(4);
+	set1.InsElem(2);
+
+	set2.InsElem(6);
+	set2.InsElem(5);
+	set2.InsElem(4);
+	set1.InsElem(2);
+
+	EXPECT_EQ(false, set1 != set2);
+}
+//---------------------------------------------------------------------------------
+TEST(TSet, eq_set_true_check)
 {
 	int dlina = 7;
 	TSet set1(dlina), set2(dlina);
@@ -333,4 +350,21 @@ TEST(TSet, eq_gives_right_answer)
 	EXPECT_EQ(true, set1 == set2);
 }
 //---------------------------------------------------------------------------------
+TEST(TSet, eq_set_false_check)
+{
+	int dlina = 7;
+	TSet set1(dlina), set2(dlina);
 
+	set1.InsElem(6);
+	set1.InsElem(3);
+	set1.InsElem(4);
+	set1.InsElem(2);
+
+	set2.InsElem(6);
+	set2.InsElem(5);
+	set2.InsElem(4);
+	set1.InsElem(2);
+
+	EXPECT_EQ(false, set1 == set2);
+}
+//---------------------------------------------------------------------------------
