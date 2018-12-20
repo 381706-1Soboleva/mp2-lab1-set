@@ -316,37 +316,17 @@ TEST(TSet, nonequivalence_set_true_check)
 //---------------------------------------------------------------------------------
 TEST(TSet, nonequivalence_set_false_check)
 {
-	int dlina = 7;
-	TSet set1(dlina), set2(dlina);
-
-	set1.InsElem(6);
-	set1.InsElem(5);
-	set1.InsElem(4);
-	set1.InsElem(2);
-
-	set2.InsElem(6);
-	set2.InsElem(5);
-	set2.InsElem(4);
-	set1.InsElem(2);
-
+	int dlina = 3;
+	TSet set1(dlina) ;
+	TSet set 2(set 1);
 	EXPECT_EQ(0, set1 != set2);
 }
 //---------------------------------------------------------------------------------
 TEST(TSet, eq_set_true_check)
 {
-	int dlina = 7;
-	TSet set1(dlina), set2(dlina);
-
-	set1.InsElem(6);
-	set1.InsElem(5);
-	set1.InsElem(4);
-	set1.InsElem(2);
-
-	set2.InsElem(6);
-	set2.InsElem(5);
-	set2.InsElem(4);
-	set1.InsElem(2);
-
+	int dlina = 3;
+	TSet set1(dlina) ;
+	TSet set 2(set 1);
 	EXPECT_EQ(1, set1 == set2);
 }
 //---------------------------------------------------------------------------------
