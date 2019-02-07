@@ -143,21 +143,23 @@ TBitField TBitField::operator~(void) // отрицание
 
 istream &operator>>(istream &istr, TBitField &bf) // ввод
 {
-  string str;
-  char c;
-  int counter = 0;
-  istr.get(c);
-  while (c != '\n')
+  char vvod;
+  int i = 0;
+  istr >> vvod;
+  while ((vvod == '1') || (vvod == '0'))
   {
-    if (c == '1') {
-      bf.SetBit(counter); 
-      counter++;
-    }
-    if (c == '0') {
-      bf.ClrBit(counter);
-      counter++;
-    }
-    istr.get(c);
+	switch (vvod)
+	{
+	case '1': bf.SetBit(i);
+	  break;
+	case '0': bf.ClrBit(i);
+	  break;
+	default:
+	{
+	  cout << "Wrong";
+	}
+	break;
+	}
   }
   return istr;
 }
@@ -165,11 +167,6 @@ istream &operator>>(istream &istr, TBitField &bf) // ввод
 ostream &operator<<(ostream &ostr, const TBitField &bf) // вывод
 {
   for (int i = 0; i < bf.bitlength; i++)
-    if (bf.GetBit(i) != 0)
-      ostr << "1 ";
-    else ostr << "0 ";
-
-  //  if (bf.GetBit(bf.bitlength - 1) != '0') ostr << "1";
-  //  else ostr << "0";
+	ostr << bf.GetBit(i);
   return ostr;
 }
