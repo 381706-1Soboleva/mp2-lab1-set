@@ -13,10 +13,11 @@
 #ifndef USE_SET // Использовать класс TBitField
 
 #include "tbitfield.h"
+#include "tset.h"
 
 int main()
 {
-  int n, m, k, count;
+  int n, m, k, count, c;
 
   setlocale(LC_ALL, "Russian");
   cout << "Тестирование программ поддержки битового поля" << endl;
@@ -49,6 +50,19 @@ int main()
     }
   cout << endl;
   cout << "В первых " << n << " числах " << count << " простых" << endl;
+
+
+  cout << "Введите размер битового поля\n";
+  cin >> с;
+  TBitField bit(с);
+  cout << "Введите битовое поле " << с << "\n";
+  cin >> bit;
+  cout << "Введенное поле\n";
+  cout << bit;
+  cout << "Множество чисел поля\n";
+  for (m = 0; m <= с; m++)
+    if (bit.GetBit(m))
+      cout << setw(3) << m << " ";
 }
 #else
 
